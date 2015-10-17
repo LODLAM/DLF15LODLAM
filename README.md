@@ -19,7 +19,7 @@ Opportunity for workshop participants to give 2-3 minute lightning talks/demonst
 
 **15 minute Break**
 
-###**2:15pm–3:30pm**: Querying and linking data with SPARQL
+####**2:15pm–3:30pm**: Querying and linking data with SPARQL
 [Tom Johnson (DPLA)](http://www.twitter.com/no_reply)
 
 ####**3:30–4:30pm**: LODLAM clinic
