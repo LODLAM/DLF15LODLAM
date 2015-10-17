@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="OpenRefine, LODRefine, linked open data, reconciliation, metadata" />
+    <meta name="description" content="Cleaning and publishing metadata: hands on tutorial with OpenRefine" />
+    <title>Cleaning and publishing metadata: hands on tutorial with OpenRefine</title>
+    <script src="./js/remark-0.6.0.min.js" type="text/javascript"></script>
+    <style type="text/css">
+      @font-face {
+        font-family: 'Droid Serif';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Droid Serif'), url(./fonts/Droid_Serif.woff) format('woff');
+      }
+      @font-face {
+        font-family: 'Yanone Kaffeesatz';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Yanone Kaffeesatz'), url(./fonts/Yanone_Kaffeesatz.woff) format('woff');
+      }
+      body {
+        font-family: 'Droid Serif';
+        font-size: 25px;
+        color: #2F302D;
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      h1 { font-size: 4em; color: #272822; }
+      h2 { font-size: 3em; color: #272822; }
+      h3 { font-size: 1.75em; color: #2F302D; }
+      small { font-size: 0.5em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      img {
+      max-width: 800px;
+      max-height: 600px;
+      }
+      code {
+        -moz-border-radius: 5px;
+        -web-border-radius: 5px;
+        background: #e7e8e2;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        /*text-shadow: 0 0 20px #333;*/
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center middle
+# Cleaning &amp; Publishing Metadata
+### Hands on tutorial with OpenRefine
+### Christina Harlow, @cm_harlow
+### LODLAM Workshop, DLF Forum 2015
+
+---
+class: center middle
+## About This Workshop
+
+
+---
+class: center middle
+## Slides, Examples, + Install
+
+### Slides, Examples, Prompts, Sample Data:
+https://github.com/cmh2166/DLF15LODLAM
+
+### Installation:
+http://openrefine.org/download.html
+
+### DERI RDF Extension:
+http://refine.deri.ie
+
+---
+class: center middle
+## Left-sharking It
+
+![Left-sharking](img/left-shark2.jpg "Left-sharking")
+
+---
+class: middle
+## Agenda
+
+
+
+---
+class: middle
+## Quick Intro to OpenRefine
+
+  * OpenRefine = power data tool
+  * Since 2012, its community-sourced
+  * OpenRefine.org, github.com/OpenRefine/Openrefine
+  * Java (and Jetty) tool that runs locally
+  * GUI runs in your chosen browser
+
+---
+class: middle
+## OpenRefine Functionalities
+
+  * Import/Export Options
+  * Cleans
+  * Facets
+  * Clusters
+  * GREL
+  * Extensions
+  * Can be a breakout
+
+---
+class: center middle
+## OpenRefine Reconciliation
+
+Reconciliation broadly: Compare values in my dataset with values in an external dataset, if deemed a match, link and pull in external datapoint information
+
+---
+class: middle
+## OpenRefine Recon Options
+
+  * Add column by fetching URL...
+    * HTTP requests to external data API in UI
+    * takes far longer to pull data
+    * requires parsing returned data with GREL
+  * Standard Recon Service API
+    * RESTful API between OpenRefine and external data
+    * requires tinkering knowledge of API building
+    * can host for easier use
+  * DERI RDF Extension
+    * no longer actively supported
+    * Standard Recon Service API to work with RDF, SPARQL endpoints
+    * RDF docs held in memory
+    * SPARQL recon dependent on SPARQL server details
+
+---
+class: middle
+## Add column by fetching URL...
+
+Access an external data set by building an external data API queries for each cell, then adding a column with the results of that API call, then parsing the results for the match.
+
+ * 'Edit column' > 'Add column by fetching URLs'
+ * Give the results column a name
+ * Enter the GREL to create the API URL query, then 'Add column'
+ * Wait possibly a very, very long time
+ * Use GREL on the results column to parse response
+
+---
+class: middle
+## Examples: Add column by fetching URL...
+
+  * Check 'addcolumnexamples.md' in this workshop's GitHub repo.
+  * Also review the Mountain West Digital Library workflow using this method with the Geonames API
+
+---
+class: center middle
+## Standard Recon Service API
+
+OpenRefine Standard Reconciliation Service takes UI data, queries external dataset, then handles ranking, normalization, and returning results to UI.
+
+= HTTP-based RESTful JSON-formatted API connecting OpenRefine to external datasets. This API can be constructed in a number of languages and frameworks.
+
+Originally based off of Freebase extension (no longer working).
+
+---
+class: middle
+## Standard Recon Service API Parts
+
+  * Recon Service Endpoint
+    * GET to send service info to OpenRefine
+    * POST to query data API for matches
+  * Recon Service Metadata
+  * Entity 'Types'
+    * Freebase holdover
+  * Query/Response Handling
+  * Other bells and whistles
+
+---
+class: center middle
+## Recon Service API Metadata
+
+"When a service is called with just a JSONP callback parameter and no other parameters, it must return its metadata as a JSON object literal with at least 3 fields 'name', 'identifierSpace', and 'schemaSpace'. Other fields are optional for reconciliation services which can make use of the default Freebase preview, suggest, etc services, but non-Freebase reconciliation services may need to implement them all." -- https://github.com/OpenRefine/OpenRefine/wiki/Reconciliation-Service-API
+
+---
+class: middle
+## API Metadata Example Part 1
+
+```
+{
+  "name" : "Reconciliation Service Name",
+  "identifierSpace" : "http://rdf.freebase.com/ns/some.name.space",
+  "schemaSpace" : "http://rdf.freebase.com/ns/type.object.id",
+  "view" : {
+    "url" : "http://www.externaldatasource.org//{{id}}"
+  },
+  "preview" : {
+    "url" : "http://this-api.freebaseapps.com/preview/{{id}}",
+    "width" : 430,
+    "height" : 300
+  },
+```
+
+---
+class: middle
+## API Metadata Example Part 2
+
+```
+  "suggest" : {
+    "type" : {
+      "service_url" : "http://this-api.freebaseapps.com",
+      "service_path" : "/suggest_type",
+      "flyout_service_url" : "http://www.freebase.com"
+    },
+    "property" : {
+      "service_url" : "http://this-api.freebaseapps.com",
+      "service_path" : "/suggest_property",
+      "flyout_service_url" : "http://www.freebase.com"
+    },
+    "entity" : {
+      "service_url" : "http://this-api.freebaseapps.com",
+      "service_path" : "/suggest",
+      "flyout_service_path" : "/flyout"
+    }
+  },
+  "defaultTypes" : []
+}
+```
+
+---
+class: middle
+## Query JSON Example
+
+```
+  {
+    "query" : "Kittens",
+    "limit" : 3,
+    "type" : "/fast/all",
+    "type_strict" : "any"
+  }
+```
+
+---
+class: middle
+## Reconciled JSON Example
+
+```
+{
+    "result" : [
+      {
+        "id" : "http://id.loc.gov/authorities/subjects/sh85072589"
+        "name" : "Kittens"
+        "type" : "/fast/all"
+        "match" : "false"
+      },
+      ... more results ...
+    ]
+  }
+```
+
+---
+class: center middle
+## Entity Types
+
+These are the types of entities for reconciliation, usually based on the result
+
+Depends on the service and is optional. Freebase holdover that can be used to access different indexes for an external data API.
+
+---
+class: center middle
+## Standard Recon Service API Templates
+
+Some wonderful developers made templates in a variety of languages, though python/flask seems to be the language/framework du jour, for folks to plug in external data API information. These will get a basic API service up and running fairly quickly for those with limited programming knowledge or time.
+
+---
+class: middle
+## Standard Recon Service Examples
+
+* FAST Reconciliation Service (not hosted, using python)
+  * Check 'pythonflaskmarkedupexample.md' in this workshop's GitHub repo.
+* LCNAF - VIAF Reconciliation Service (hosted and not hosted, using python)
+* VIAF Reconciliation Service Example (hosted, using PHP)
+* Basic Python/Flask Template
+* Extended Python/Flask Template
+
+---
+class: center middle
+## DERI RDF Extension Recon
+
+Using this, can reconcile against RDF documents and SPARQL Endpoints.
+
+**No longer actively supported.**
+
+---
+class: center middle
+## Breakouts
+
+Each option has instructions for using existing and/or building your own. Working in groups/alone/however, go ahead and start experimenting or building. Additionally, folks can work on improving the documentation mentioned above.
+
+---
+class: middle center
+## Links + Contact
+
+http://openrefine.org/
+
+http://github.com/openrefine/openrefine
+
+https://groups.google.com/forum/#!forum/openrefine
+
+@openrefine, @cm_harlow
+
+---
+class: middle
+
+
+    </textarea>
+    <div id="slideshow"></div>
+    <script type="text/javascript">
+        var slideshow = remark.create({
+            highlightLanguage: 'no-highlight',
+            highlightStyle: 'zenburn',
+        });
+    </script>
+  </body>
+</html>
