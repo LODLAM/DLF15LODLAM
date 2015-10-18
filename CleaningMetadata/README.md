@@ -36,18 +36,21 @@ cmharlow@gmail.com
     8. Building LDF Server for OpenRefine recon
     9. Building Recon Services
 
-Examples: 
-- Normalizing, Building out a local SKOS RDF Authority file
+## Work Tracks 
+Follow along with one of these tracks through the workshop. By the end, we won't have *perfect* or *complete* RDF files, but we'll know how to get there and have starter RDF objects.
+
+- Import sample CSV data to make into a local SKOS/RDF "Authority" File
     - Cleaning terms
     - Building out related terms with URIs from other datasets
     - Producing SKOS RDF
     - Reconciling other datasets against our local Authority file
-- Updating sample metadata with URIs, related information from LOD sets
+- Import sample DC/XML metadata to make into DPLA-style RDF Objects following DPLA MAP v.4
     - id.loc.gov
     - Geonames
     - Getty AAT
     - Agrovoc
     - DPLA, Europeana
+- Bring your own data & DIY it
 
 ## Contents of this Directory
 - Slides
