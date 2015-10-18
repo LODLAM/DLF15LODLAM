@@ -1,26 +1,36 @@
-#LODLAM Metadata Portion Installation Instructions
+# LODLAM Workshop: Metadata Cleaning Portion
+# Installation Instructions
 
-##About
+## About
 
-This workshop will primarily work with LODRefine, or OpenRefine with the DERI RDF Extension Installed. There will be possibilities for working with Linked Data Fragments and HDT files in one of the breakout sessions, which will involve other installation requirements, detailed further below.
+### Required Preparation
+This workshop will primarily work with **LODRefine** (Linked Open Data OpenRefine), or **OpenRefine** with the **DERI RDF Extension** installed. OpenRefine requires Java (see note below in Installation instructions) and a web browser to run in (**Not Internet Explorer**).
 
-##LODRefine Installation
+There are tests to make sure you installations are ready to go on workshop day in this document as well.
 
+### Optional Preparation
+Additionally, if you want to perform the local reconciliation parts of the workshop (and because we'll be working with conference wi-fi, *this is recommended*), please install and/or setup on your computer **Python** (>=2.7), **Pip** (or other Python package manager), **Git**, and **GitHub**. 
+
+We might work with **Linked Data Fragments** and **HDT** files in one of the clinic sessions, which will involve other installation requirements, detailed further below. Those are optional, obviously, but good to have installed and ready if you're interested in learning more about working with those technologies (along with **Heroku** if you'd like to push your LDF server or client to the web).
+
+### Need Help?
+If you have any issues with the following, please do not hesitate to contact Christina at cmharlow@gmail.com or @cm_harlow on Twitter. We can work issues out over email or set up a Google Hangout time for me to see the errors and try to help that way.
+
+## Required Installation
+
+### LODRefine Installation
 The cleaning metadata portion of this workshop will primarily work with LODRefine (Linked Open Data Refine) or an instance of OpenRefine with the DERI RDF Extension added.
 
-Follow the choose your adventure below for getting LODRefine installed on your computer. Review all the options available before going immediately to the first step; there are a number of ways you can setup this tool.
+Follow the choose your adventure below for getting LODRefine installed on your computer/work environment. Review all the options available before going immediately to the first step; there are a number of ways you can setup this tool.
 
-After installation, please run the simple test below to ensure your LODRefine installation is ready for the workshop.
+After installation, please run the test below to ensure your LODRefine installation is ready for the workshop.
 
-Note: We will discuss more about how OpenRefine/LODRefine works during the metadata cleaning portion of the workshop, but it is important to realize now that OpenRefine runs with all data saved in memory - it does not use a database of some sort. This means there will be performance issues with bigger datasets and when reconciling against locally-stored datasets, especially dependent on the memory available in your work environment. 
+**Nota bene:** We will discuss more about how OpenRefine/LODRefine works during the metadata cleaning portion of the workshop, but it is important to realize now that OpenRefine runs with all data saved in memory - it does not use a database of some sort. This means there will be performance issues with bigger datasets and when reconciling against locally-stored RDF documents, especially dependent on the memory available in your work environment. 
 
-If you have any issues with the following, please do not hesitate to contact Christina at cmharlow@gmail.com or @cm_harlow on Twitter.
+### Java Requirements:
+OpenRefine is built in Java. You will need Java JRE. Mac and Linux machines will need to have Java 6 or 7 installed (if you have Java 8, and don't want to mess with Java 6 or 7, try grabbing LODRefine from GitHub and running via the Command Line Interface/client of your choice first, this sometimes is a work-around).
 
-###Requirements no matter what:
-
-OpenRefine is built with java. You will need Java JRE install. Mac and Linux machines will need to have Java 6 or 7 installed (if you have Java 8, and don't want to mess with Java 6 or 7, try grabbing LODRefine from GitHub and running via the Command Line Interface/client of your choice first).
-
-Java JRE isn't hard to install, but takes forever to download, especially on conference wifi. You are forewarned.
+**Java JRE isn't hard to install, but takes forever to download, especially on conference wifi. You are forewarned.**
 
 ###Option 1: Have OpenRefine/Google Refine Already Installed?
 
@@ -45,11 +55,11 @@ No worries! We'll get you set up.
 
 There are a few options for getting LODRefine onto your computer. If you prefer to keep the installation and start-up as simple as possible, use one of the OpenRefine installers detailed in Option 2a, below. If you're prefer to work with a version of LODRefine that runs via command line interface and feel comfortable with Git and handling installation of dependencies, clone a LODRefine repository as detailed in Option 2b, below.
 
-Both methods should get you an installation of OpenRefine/LODRefine ready for the workshop.
+Both methods should get you an installation of OpenRefine/LODRefine ready for the workshop. Option 2b has the possible benefit of running a bit faster and showing what exactly LODRefine is doing in the back end, if you're interested in that.
 
 ####Option 2a: Install OpenRefine via Installer + Add DERI RDF Extension Manually
 
-This versions works more slowly, but comes with a packaged installer.
+This versions works more slowly, but comes with a packaged installer/icon.
 
 1. Go to the [OpenRefine Site Download Page](http://openrefine.org/download.html).
 2. Download the OpenRefine file for your operating system and follow the instructions there (the release/stable version will install still as 'Google Refine' - this is okay).
@@ -65,13 +75,13 @@ This versions works more slowly, but comes with a packaged installer.
 
 ####Option 2b: Install LODRefine from GitHub/Source
 
-Alternatively, you can install LODRefine (a version of OpenRefine 2.5 with the DERI RDF extension among others already installed) by downloaded or git cloning then building LODRefine locally. 
+Alternatively, you can install LODRefine (a version of OpenRefine 2.5 with the DERI RDF extension among others already installed) by downloading or git cloning LODRefine locally. 
 
 1. Clone or download LODRefine:
     2. From GitHub, clone the master branch of this repository: https://github.com/sparkica/LODRefine
     3. From Sourceforge, download the most recent version of LODRefine: http://sourceforge.net/projects/lodrefine/postdownload?source=dlp
 3. Move LODRefine to wherever on your computer you'd like to run it from. I usually keep these sorts of applications in a directory call 'Tools'.
-4. Change into that LODRefine directory in some kind of command line interface or client (e.g. Terminal on Mac, Command Prompt in Windows), and start LODRefine by typing:
+4. Change into that LODRefine directory in some kind of command line interface or client (e.g. Terminal on Mac, Command Prompt in Windows,...), and start LODRefine by typing:
     6. On Mac/Linux:
     ```
     $ ./refine
@@ -85,7 +95,6 @@ Alternatively, you can install LODRefine (a version of OpenRefine 2.5 with the D
 8. Go to the 'Test your install' section and make sure you're ready to go.
 
 ###Option 3: Don't Want to Install OpenRefine right now?
-
 I'm working with RefinePro, a company that runs cloud-hosted instances of OpenRefine, to get OpenRefine with the DERI RDF extensions working for a back up possibility.
 
 At present, RefinePro does have instances of OpenRefine with the DERI RDF extensions installed, but the RDF reconciliation services sometimes don't work.
@@ -102,11 +111,10 @@ If you want to try a cloud-based version and see if it works for you instead of 
 7. Go to the 'Test your install' section and make sure you're ready to go.
 
 ##Test Your Install
-
 To make sure you're ready to go for the LODLAM metadata cleaning portion of the day, perform the following steps:
 
-1. Start OpenRefine/LODRefine however you normally do (either by clicking the Diamond logo where you've stashed OpenRefine, or using the refine command in a Command Line Interface).
-2. If it doesn't pop up for you automatically, go to http://127.0.0.1:3333 in your web browser of choice (not Internet Explorer). 
+1. Start OpenRefine/LODRefine however you normally do (either by clicking the Diamond logo where you've stashed OpenRefine, or using the refine command in a Command Line Interface or client).
+2. If OpenRefine in a browser window doesn't pop up for you automatically, go to http://127.0.0.1:3333 in your web browser of choice (**not Internet Explorer**). 
 3. Go to 'Create Project' > 'Clipboard'. Copy and paste in the following:
 ```
 English
