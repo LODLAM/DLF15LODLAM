@@ -5,7 +5,7 @@ This workshop will primarily work with **LODRefine** (Linked Open Data OpenRefin
 #### OpenRefine Installation Choices:
 
 1. [Already have OpenRefine or Google Refine Installed, just need to install DERI RDF Extension](AddDERIExtension.md)
-2. [Already have LODRefine installed, just need to test it](OpenRefineInstallationTest.md)
+2. [Already have LODRefine or OpenRefine with the DERI RDF Extension installed, just need to test it](OpenRefineInstallationTest.md)
 3. [Don't have OpenRefine or LODRefine installed yet](OpenRefineInstallation.md)
 
 #### Test Your OpenRefine Installation Choice
@@ -26,4 +26,4 @@ We might work with **Linked Data Fragments** local servers in one of the clinic 
 ## Need Help?
 If you have any issues with the following, please do not hesitate to contact Christina at cmharlow@gmail.com or @cm_harlow on Twitter. We can work issues out over email or set up a Google Hangout time for me to see the errors and try to help that way.
 
-[Back to the LODLAM Workshop Agenda](../../)
+[Back to the LODLAM Workshop Agenda](https://github.com/cmh2166/DLF15LODLAM/)

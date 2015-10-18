@@ -76,4 +76,4 @@ Questions? Get in touch with [Christina](mailto:cmharlow@gmail.com).
 
 [Back to the Metadata Cleaning Agenda](../)
 
-[Back to the LODLAM Workshop Agenda](../../)
+[Back to the LODLAM Workshop Agenda](https://github.com/cmh2166/DLF15LODLAM/)
