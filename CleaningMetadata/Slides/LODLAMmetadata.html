@@ -9,10 +9,10 @@
     <script src="./js/remark-0.6.0.min.js" type="text/javascript"></script>
     <style type="text/css">
       @font-face {
-        font-family: 'Droid Serif';
+        font-family: 'Cutive Mono';
         font-style: normal;
         font-weight: normal;
-        src: local('Droid Serif'), url(./fonts/Droid_Serif.woff) format('woff');
+        src: local('Cutive Mono'), url(./fonts/Cutive_Mono.woff2) format('woff2');
       }
       @font-face {
         font-family: 'Yanone Kaffeesatz';
@@ -21,8 +21,8 @@
         src: local('Yanone Kaffeesatz'), url(./fonts/Yanone_Kaffeesatz.woff) format('woff');
       }
       body {
-        font-family: 'Droid Serif';
-        font-size: 25px;
+        font-family: 'Cutive Mono';
+        font-size: 30px;
         color: #2F302D;
       }
       h1, h2, h3 {
@@ -30,9 +30,9 @@
         font-weight: 400;
         margin-bottom: 0;
       }
-      h1 { font-size: 4em; color: #272822; }
-      h2 { font-size: 3em; color: #272822; }
-      h3 { font-size: 1.75em; color: #2F302D; }
+      h1 { font-size: 3.5em; color: #193466; }
+      h2 { font-size: 2.5em; color: #193466; }
+      h3 { font-size: 1.75em; color: #193466; }
       small { font-size: 0.5em; }
       .footnote {
         position: absolute;
@@ -42,7 +42,7 @@
       .red { color: #fa0000; }
       .large { font-size: 2em; }
       a, a > code {
-        color: rgb(249, 38, 114);
+        color: #4183c4;
         text-decoration: none;
       }
       img {
@@ -140,63 +140,224 @@
     <textarea id="source">
 class: center middle
 # Cleaning &amp; Publishing Metadata
-### Hands on tutorial with OpenRefine
-### Christina Harlow, @cm_harlow
-### LODLAM Workshop, DLF Forum 2015
+### A Hands on Tutorial with OpenRefine
+**Christina Harlow, @cm_harlow**
 
----
-class: center middle
-## About This Workshop
-
+**LODLAM Workshop, DLF Forum 2015**
 
 ---
 class: center middle
 ## Slides, Examples, + Install
 
-### Slides, Examples, Prompts, Sample Data:
 https://github.com/cmh2166/DLF15LODLAM
 
-### Installation:
-http://openrefine.org/download.html
-
-### DERI RDF Extension:
-http://refine.deri.ie
 
 ---
 class: center middle
-## Left-sharking It
+## Didn't do Installation HW?
+
+![Ernest the cat is not pleased](img/ErnestNotHappy.jpg "Ernest the cat is not pleased")
+
+Ernest is not happy with you.
+
+---
+class: center middle
+## Quick Installation Backup
+
+Go to Installation instructions, follow RefinePro options, &amp; hope you get instance on server where DERI extension works.
+
+---
+class: middle
+## Agenda/Method
+
+1. Introduction (5)
+2. Importing Data (15)
+3. Data Munging (20)
+4. Reconciliation (30)
+5. Mapping, Exporting (30)
+6. Wrap-up (5)
+
+---
+class: middle
+## Quick Introduction
+
+1. Introduction &lt;==
+2. Importing Data
+3. Data Munging
+4. Reconciliation
+5. Mapping, Exporting
+6. Wrap-up
+
+---
+class: center middle
+## Learning LOD by Working with LOD
+
+Goal: Learn Linked Open Data by working with it in context of Libraries, Archives, &amp; Museums metadata
+
+Help: Raise Hand, Ask Friend, Check Instructions > LODdictionary.md
+
+---
+class: center middle
+## Let's All Left-shark It
 
 ![Left-sharking](img/left-shark2.jpg "Left-sharking")
 
 ---
 class: middle
-## Agenda
+## But Also...
 
+"Hacker School Rules"
 
+- No feigning surprise
+- No well-actually's
+- No back-seat driving
+- No subtle -isms
+
+<small>https://www.recurse.com/manual</small>
 
 ---
 class: middle
 ## Quick Intro to OpenRefine
 
   * OpenRefine = power data tool
-  * Since 2012, its community-sourced
-  * OpenRefine.org, github.com/OpenRefine/Openrefine
-  * Java (and Jetty) tool that runs locally
-  * GUI runs in your chosen browser
+  * Since 2012, community-sourced
+  * OpenRefine.org
+  * github.com/OpenRefine/Openrefine
+  * Java (&amp; Jetty) tool that runs locally
+  * GUI runs in your chosen browser (NOT INTERNET EXPLORER)
+
+<small>Cleaning Metadata > Instructions > Introduction.md</small>
 
 ---
 class: middle
-## OpenRefine Functionalities
+## OpenRefine &amp; RDF
 
-  * Import/Export Options
-  * Cleans
-  * Facets
-  * Clusters
-  * GREL
-  * Extensions
-  * Can be a breakout
+  * Native support for importing RDF/XML, RDF Ntriples
+  * Original Freebase Extension
+  * DERI RDF Extension, LODRefine
+    * RDF Document Reconciliation
+    * RDF Skeleton, Mapping
+    * RDF Export: RDF/XML, RDF Turtle
+
+<small>Cleaning Metadata > Instructions > Introduction.md</small>
 
 ---
+class: center middle
+## DERI RDF Extension &amp; LODRefine
+###No longer actively supported
+Each annoyance re:slowness, bugs = 1
+
+If reaches 30, we promise to learn Java + become LODRefine committers
+
+<small>Cleaning Metadata > Instructions > Introduction.md</small>
+
+---
+class: middle
+## Why so much Recon? Where's the RDF?
+
+Using RDF data &amp; tools like OpenRefine = better entity matching
+
+Possible Influences:
+
+  * [VIVO Recon Service](https://wiki.duraspace.org/display/VIVO/Extending+Google+Refine+for+VIVO)
+  * [Nomenklatura](http://nomenklatura.okfnlabs.org/)
+  * [Ecco!](https://linkedjazz.org/tools/ecco/)
+
+<small>Cleaning Metadata > Instructions > Introduction.md</small>
+
+---
+class: middle
+## Importing Data
+
+1. Introduction
+2. Importing Data &lt;==
+3. Data Munging
+4. Reconciliation
+5. Mapping, Exporting
+6. Wrap-up
+
+---
+class: middle
+## Importing Data
+
+3 'tracks' for this workshop:
+
+1. Import sample data to make into local SKOS/RDF authority
+2. Import sample metadata to make into DPLA-style RDF Objects
+3. Import your own data &amp; DIY it
+
+<small>Starter data: Cleaning Metadata > Data</small>
+
+---
+class: middle
+## Import data into OpenRefine
+
+1. Start up OpenRefine or LODRefine
+2. Click on Create Project Tab
+3. Click on Web Addresses (URLs)
+4. Enter the URL for GitHub Raw Object of Starter Dataset you want to use
+
+(Or download/save your metadata to working environment &amp; use 'This Computer')
+
+<small>Starter data: Cleaning Metadata > Instructions > Import.md</small>
+
+---
+class: middle
+## Import data into OpenRefine cont.
+
+5. Preview of your data as OpenRefine project
+6. Change any settings as needed
+  * XML, Json will need you to choose 'record' object
+  * CSV, Excel: review for skipping header rows
+  * RDF: Preview options for loading, how data loads
+7. Once satisfied, give name, Create Project
+
+<small>Starter data: Cleaning Metadata > Instructions > Import.md</small>
+
+---
+class: middle
+## Viewing Our OpenRefine Project
+
+* Saved Automatically with Undo / Redo Panel
+* Rows / Records divide = VERY IMPORTANT
+* Extensions, Export Options in Top Right Corner
+* Facet panel on left
+* Click Open... to open new project
+* If something freezes, refresh the browser (gahhhh)
+
+<small>Starter data: Cleaning Metadata > Instructions > Import.md</small>
+
+---
+
+class: middle
+## Data Munging
+
+1. Introduction
+2. Importing Data
+3. Data Munging &lt;==
+4. Reconciliation
+5. Mapping, Exporting
+6. Wrap-up
+
+---
+class: center middle
+## Metadata Munging in OpenRefine
+
+
+
+---
+class: middle
+## Reconciliation
+
+1. Introduction
+2. Importing Data
+3. Data Munging
+4. Reconciliation &lt;==
+5. Mapping, Exporting
+6. Wrap-up
+
+---
+
 class: center middle
 ## OpenRefine Reconciliation
 
@@ -222,176 +383,35 @@ class: middle
 
 ---
 class: middle
-## Add column by fetching URL...
+## Mapping &amp; Exporting RDF
 
-Access an external data set by building an external data API queries for each cell, then adding a column with the results of that API call, then parsing the results for the match.
-
- * 'Edit column' > 'Add column by fetching URLs'
- * Give the results column a name
- * Enter the GREL to create the API URL query, then 'Add column'
- * Wait possibly a very, very long time
- * Use GREL on the results column to parse response
-
----
-class: middle
-## Examples: Add column by fetching URL...
-
-  * Check 'addcolumnexamples.md' in this workshop's GitHub repo.
-  * Also review the Mountain West Digital Library workflow using this method with the Geonames API
-
----
-class: center middle
-## Standard Recon Service API
-
-OpenRefine Standard Reconciliation Service takes UI data, queries external dataset, then handles ranking, normalization, and returning results to UI.
-
-= HTTP-based RESTful JSON-formatted API connecting OpenRefine to external datasets. This API can be constructed in a number of languages and frameworks.
-
-Originally based off of Freebase extension (no longer working).
+1. Introduction
+2. Importing Data
+3. Data Munging
+4. Reconciliation
+5. Mapping, Exporting &lt;==
+6. Wrap-up
 
 ---
 class: middle
-## Standard Recon Service API Parts
+## Wrap-Up
 
-  * Recon Service Endpoint
-    * GET to send service info to OpenRefine
-    * POST to query data API for matches
-  * Recon Service Metadata
-  * Entity 'Types'
-    * Freebase holdover
-  * Query/Response Handling
-  * Other bells and whistles
-
----
-class: center middle
-## Recon Service API Metadata
-
-"When a service is called with just a JSONP callback parameter and no other parameters, it must return its metadata as a JSON object literal with at least 3 fields 'name', 'identifierSpace', and 'schemaSpace'. Other fields are optional for reconciliation services which can make use of the default Freebase preview, suggest, etc services, but non-Freebase reconciliation services may need to implement them all." -- https://github.com/OpenRefine/OpenRefine/wiki/Reconciliation-Service-API
-
----
-class: middle
-## API Metadata Example Part 1
-
-```
-{
-  "name" : "Reconciliation Service Name",
-  "identifierSpace" : "http://rdf.freebase.com/ns/some.name.space",
-  "schemaSpace" : "http://rdf.freebase.com/ns/type.object.id",
-  "view" : {
-    "url" : "http://www.externaldatasource.org//{{id}}"
-  },
-  "preview" : {
-    "url" : "http://this-api.freebaseapps.com/preview/{{id}}",
-    "width" : 430,
-    "height" : 300
-  },
-```
-
----
-class: middle
-## API Metadata Example Part 2
-
-```
-  "suggest" : {
-    "type" : {
-      "service_url" : "http://this-api.freebaseapps.com",
-      "service_path" : "/suggest_type",
-      "flyout_service_url" : "http://www.freebase.com"
-    },
-    "property" : {
-      "service_url" : "http://this-api.freebaseapps.com",
-      "service_path" : "/suggest_property",
-      "flyout_service_url" : "http://www.freebase.com"
-    },
-    "entity" : {
-      "service_url" : "http://this-api.freebaseapps.com",
-      "service_path" : "/suggest",
-      "flyout_service_path" : "/flyout"
-    }
-  },
-  "defaultTypes" : []
-}
-```
-
----
-class: middle
-## Query JSON Example
-
-```
-  {
-    "query" : "Kittens",
-    "limit" : 3,
-    "type" : "/fast/all",
-    "type_strict" : "any"
-  }
-```
-
----
-class: middle
-## Reconciled JSON Example
-
-```
-{
-    "result" : [
-      {
-        "id" : "http://id.loc.gov/authorities/subjects/sh85072589"
-        "name" : "Kittens"
-        "type" : "/fast/all"
-        "match" : "false"
-      },
-      ... more results ...
-    ]
-  }
-```
-
----
-class: center middle
-## Entity Types
-
-These are the types of entities for reconciliation, usually based on the result
-
-Depends on the service and is optional. Freebase holdover that can be used to access different indexes for an external data API.
-
----
-class: center middle
-## Standard Recon Service API Templates
-
-Some wonderful developers made templates in a variety of languages, though python/flask seems to be the language/framework du jour, for folks to plug in external data API information. These will get a basic API service up and running fairly quickly for those with limited programming knowledge or time.
-
----
-class: middle
-## Standard Recon Service Examples
-
-* FAST Reconciliation Service (not hosted, using python)
-  * Check 'pythonflaskmarkedupexample.md' in this workshop's GitHub repo.
-* LCNAF - VIAF Reconciliation Service (hosted and not hosted, using python)
-* VIAF Reconciliation Service Example (hosted, using PHP)
-* Basic Python/Flask Template
-* Extended Python/Flask Template
-
----
-class: center middle
-## DERI RDF Extension Recon
-
-Using this, can reconcile against RDF documents and SPARQL Endpoints.
-
-**No longer actively supported.**
-
----
-class: center middle
-## Breakouts
-
-Each option has instructions for using existing and/or building your own. Working in groups/alone/however, go ahead and start experimenting or building. Additionally, folks can work on improving the documentation mentioned above.
+1. Introduction
+2. Importing Data
+3. Data Munging
+4. Reconciliation
+5. Mapping, Exporting
+6. Wrap-up &lt;==
 
 ---
 class: middle center
 ## Links + Contact
 
+cmharlow@gmail.com
+
 http://openrefine.org/
 
 http://github.com/openrefine/openrefine
-
-https://groups.google.com/forum/#!forum/openrefine
 
 @openrefine, @cm_harlow
 
