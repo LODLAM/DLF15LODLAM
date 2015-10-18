@@ -4,7 +4,7 @@
 [Christina Harlow (University of Tennessee)](http://www.twitter.com/cm_harlow)
 cmharlow@gmail.com
 
-**Note to Participants**: Please have OpenRefine and the DERI RDF Extension or LODRefine installed before the start of the workshop. Instructions for installation are available at [Installation](Installation.md). If you run into any issues with installation, please get in touch with [me](mailto:cmharlow@gmail.com) as soon as you are able, and I'll work through these issues with you.
+**Note to Participants**: Please have OpenRefine and the DERI RDF Extension or LODRefine installed before the start of the workshop. Instructions for installation are available at [Installation](Installation/README.md). If you run into any issues with installation, please get in touch with [me](mailto:cmharlow@gmail.com) as soon as you are able, and I'll work through these issues with you.
 
 ## Agenda
 

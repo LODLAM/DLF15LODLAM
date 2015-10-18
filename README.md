@@ -11,7 +11,7 @@ Ben Hyman (BC Libraries Cooperative)
 
 **15 minute Break**
 
-**10:15am–12:00pm**: Cleaning and publishing metadata: hands on tutorial with OpenRefine
+**10:15am–12:00pm**: [Cleaning and publishing metadata: hands on tutorial with OpenRefine](CleaningMetadata)
 
 [Christina Harlow (University of Tennessee)](http://www.twitter.com/cm_harlow)
 
