@@ -19,8 +19,8 @@ If you don't want to install anything right now and are willing to take your cha
 #### Option 1: Install OpenRefine via Installer + Add DERI RDF Extension Manually
 This versions works more slowly, but comes with a packaged installer/icon.
 
-1. Go to the [OpenRefine Site Download Page](http://openrefine.org/download.html).
-2. Download the OpenRefine file for your operating system and follow the instructions there (the release/stable version will install still as 'Google Refine' - this is okay).
+1. Go to the [OpenRefine 2.6 beta Download Page](https://github.com/OpenRefine/OpenRefine/releases/tag/2.6-beta.1). Scroll down to the bottom of the page.
+2. Download the OpenRefine file for your operating system and follow the instructions:
     2. For Windows: Download, unzip, and double-click on openrefine.exe. If you’re having issues, try double-clicking on refine.bat instead.
     3. For Mac: Download, open, drag icon into the Applications folder and double click on it. If you get the error: 'this file is damaged should be moved to trash' (or something similar), do the following:
         4. Open System Preferences

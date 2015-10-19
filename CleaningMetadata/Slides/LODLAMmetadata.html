@@ -303,27 +303,35 @@ class: middle
 
 ---
 class: middle
-## Import data into OpenRefine cont.
+## Import data into OpenRefine
 
-5. Preview of your data as OpenRefine project
-6. Change any settings as needed
-  * XML, Json will need you to choose 'record' object
-  * CSV, Excel: review for skipping header rows
-  * RDF: Preview options for loading, how data loads
-7. Once satisfied, give name, Create Project
+5. Preview your data as project
+6. Change settings as needed
+  * XML, Json: need to choose 'record' object
+  * CSV, Excel: review for header rows
+  * RDF: Preview options for loading
+7. Once ready, give name, Create Project
 
 <small>Starter data: Cleaning Metadata > Instructions > Import.md</small>
 
 ---
 class: middle
-## Viewing Our OpenRefine Project
-
+## Viewing OpenRefine Project
 * Saved Automatically with Undo / Redo Panel
-* Rows / Records divide = VERY IMPORTANT
+* Rows/Records divide = VERY IMPORTANT
 * Extensions, Export Options in Top Right Corner
-* Facet panel on left
-* Click Open... to open new project
+* Facet, Filter panel on left
 * If something freezes, refresh the browser (gahhhh)
+
+<small>Starter data: Cleaning Metadata > Instructions > Import.md</small>
+
+---
+class: middle
+## Import Your Data
+
+Go ahead and import the data for the track you'd like to pursue. Explore the possible options.
+
+Bonus: Once your main project is created, export one of the sample RDF documents to see how it looks as an OpenRefine project. This differs from what the DERI extension expects.
 
 <small>Starter data: Cleaning Metadata > Instructions > Import.md</small>
 
@@ -339,10 +347,56 @@ class: middle
 6. Wrap-up
 
 ---
-class: center middle
+class: middle
 ## Metadata Munging in OpenRefine
+Ways to Normalize, Remediate Data:
+
+* Join, Split Rows
+* Splitting, Renaming Columns
+* Faceting, Clustering, Filtering
+* Google Refine Expression Language (GREL)
+
+<small>Cleaning Metadata > Instructions > DataMunging.md</small>
+
+---
+class: middle
+## Join, Split Rows
 
 
+<small>Cleaning Metadata > Instructions > DataMunging.md</small>
+
+---
+class: middle
+## Splitting, Renaming Columns
+
+
+<small>Cleaning Metadata > Instructions > DataMunging.md</small>
+
+---
+class: middle
+## Faceting, Clustering, Filtering
+
+
+<small>Cleaning Metadata > Instructions > DataMunging.md</small>
+
+---
+class: middle
+## Google Refine Expression Language (GREL)
+
+
+<small>Cleaning Metadata > Instructions > DataMunging.md</small>
+
+---
+class: middle
+## Prepare Your Data
+
+* Get columns renamed as needed
+* Get cells joined
+* Facet, review
+* Facet, cluster, normalize
+* Filter to target, map values to new fields
+
+<small>Cleaning Metadata > Instructions > DataMunging.md</small>
 
 ---
 class: middle
@@ -362,23 +416,64 @@ class: center middle
 
 Reconciliation broadly: Compare values in my dataset with values in an external dataset, if deemed a match, link and pull in external datapoint information
 
+<small>Cleaning Metadata > Instructions > Reconciliation</small>
+
 ---
 class: middle
-## OpenRefine Recon Options
+## Add column by fetching URL...
+* HTTP requests to external data API in UI
+* takes far longer to pull data
+* requires parsing returned data with GREL
 
-  * Add column by fetching URL...
-    * HTTP requests to external data API in UI
-    * takes far longer to pull data
-    * requires parsing returned data with GREL
-  * Standard Recon Service API
-    * RESTful API between OpenRefine and external data
-    * requires tinkering knowledge of API building
-    * can host for easier use
-  * DERI RDF Extension
-    * no longer actively supported
-    * Standard Recon Service API to work with RDF, SPARQL endpoints
-    * RDF docs held in memory
-    * SPARQL recon dependent on SPARQL server details
+<small>Cleaning Metadata > Instructions > Reconciliation</small>
+
+---
+class: middle
+## Standard Recon Service API
+* RESTful API between OpenRefine and external data
+* requires tinkering knowledge of API building
+* can host for easier use
+
+<small>Cleaning Metadata > Instructions > Reconciliation</small>
+
+---
+class: middle
+## Handling Recon Objects
+*
+
+<small>Cleaning Metadata > Instructions > Reconciliation</small>
+
+---
+class: middle
+## DERI RDF Extension
+* no longer actively supported
+* Standard Recon Service API to work with RDF, SPARQL endpoints
+* RDF docs held in memory
+* SPARQL recon dependent on SPARQL server details
+
+<small>Cleaning Metadata > Instructions > Reconciliation</small>
+
+---
+class: middle
+## Reconciliation Demos
+* LCSH via SPARQL
+* Languages via RDF Doc
+* Geonames via Recon Service
+* AAT via LDF Recon Service
+* DBpedia via SPARQL
+
+<small>Cleaning Metadata > Instructions > Reconciliation</small>
+
+---
+class: middle
+## OpenRefine Recon
+
+1. Run Recon according to your choosing - see options in Recon instructions
+2. Pull URIs for a particular field
+3. Pull other information helpful for your projects
+4. Make sure to pull in URIs, information
+
+<small>Cleaning Metadata > Instructions > Reconciliation</small>
 
 ---
 class: middle
@@ -390,6 +485,47 @@ class: middle
 4. Reconciliation
 5. Mapping, Exporting &lt;==
 6. Wrap-up
+
+---
+class: middle
+## DERI RDF Skeleton
+
+
+
+<small>Cleaning Metadata > Instructions > MapExportRDF.md</small>
+
+---
+class: middle
+## DERI RDF Mapping: Add Namespaces
+
+
+<small>Cleaning Metadata > Instructions > MapExportRDF.md</small>
+
+---
+class: middle
+## RDF:Type, Blank Nodes
+
+
+
+<small>Cleaning Metadata > Instructions > MapExportRDF.md</small>
+
+---
+class: middle
+## Export RDF/XML, RDF-Ntriples
+
+<small>Cleaning Metadata > Instructions > MapExportRDF.md</small>
+
+---
+class: middle
+## Map &amp; Export
+
+Map your data to RDF using the RDF skeleton, preview the Turtle, then export when you're ready.
+
+Use the SKOS docs and the DPLA MAP v.4 doc to help guide the creation.
+
+Bonus: Export your doc then use for a test RDF Doc reconcile.
+
+<small>Cleaning Metadata > Instructions > MapExportRDF.md</small>
 
 ---
 class: middle
