@@ -60,8 +60,10 @@ At present, RefinePro does have instances of OpenRefine with the DERI RDF extens
 
 If you want to try a cloud-based version and see if it works for you instead of going through installation instructions above, you can get a free month trial to RefinePro. Follow these steps then make sure it works before calling it quits:
 
+**Note, I'm working very closely with the RefinePro developer to get this option working for the workshop, but it is still a bit buggy as of 10/21. If you register and run into errors, get in touch with [me](mailto:cmharlow@gmail.com).**
+
 1. Go to [the RefinePro site](https://app.refinepro.com/register/) and register. 
-2. On that registration page, for the 'Community' portion, choose 'DST4L-EU'. This will get you an instance of OpenRefine with the DERI RDF Extension installed.
+2. On that registration page, for the 'Community' portion, choose 'LODLAM'. This will get you an instance of OpenRefine with the DERI RDF Extension installed.
 3. When done, enter. You'll get a free month trial.
 3. Respond to the email confirmation. This should take you back to the RefinePro login. 
 4. Logging in takes you to your dashboard. Choose to start an instance - this will create an OpenRefine instance. 
