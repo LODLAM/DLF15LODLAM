@@ -44,12 +44,7 @@ Follow along with one of these tracks through the workshop. By the end, we won't
     - Building out related terms with URIs from other datasets
     - Producing SKOS RDF
     - Reconciling other datasets against our local Authority file
-- Import sample DC/XML metadata to make into DPLA-style RDF Objects following DPLA MAP v.4
-    - id.loc.gov
-    - Geonames
-    - Getty AAT
-    - Agrovoc
-    - DPLA, Europeana
+- Import sample DC/XML metadata to make into DC/RDF Objects
 - Bring your own data & DIY it
 
 ## Contents of this Directory

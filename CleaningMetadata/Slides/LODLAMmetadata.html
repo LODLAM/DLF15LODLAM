@@ -194,7 +194,7 @@ class: center middle
 
 Goal: Learn Linked Open Data by working with it in context of Libraries, Archives, &amp; Museums metadata
 
-Help: Raise Hand, Ask Friend, Check Instructions > LODdictionary.md
+Help: Raise Hand, Ask Friend, Check Instructions, Check online
 
 ---
 class: center middle
@@ -226,8 +226,6 @@ class: middle
   * Java (&amp; Jetty) tool that runs locally
   * GUI runs in your chosen browser (NOT INTERNET EXPLORER)
 
-<small>Cleaning Metadata > Instructions > Introduction.md</small>
-
 ---
 class: middle
 ## OpenRefine &amp; RDF
@@ -239,8 +237,6 @@ class: middle
     * RDF Skeleton, Mapping
     * RDF Export: RDF/XML, RDF Turtle
 
-<small>Cleaning Metadata > Instructions > Introduction.md</small>
-
 ---
 class: center middle
 ## DERI RDF Extension &amp; LODRefine
@@ -248,8 +244,6 @@ class: center middle
 Each annoyance re:slowness, bugs = 1
 
 If reaches 30, we promise to learn Java + become LODRefine committers
-
-<small>Cleaning Metadata > Instructions > Introduction.md</small>
 
 ---
 class: middle
@@ -262,8 +256,6 @@ Possible Influences:
   * [VIVO Recon Service](https://wiki.duraspace.org/display/VIVO/Extending+Google+Refine+for+VIVO)
   * [Nomenklatura](http://nomenklatura.okfnlabs.org/)
   * [Ecco!](https://linkedjazz.org/tools/ecco/)
-
-<small>Cleaning Metadata > Instructions > Introduction.md</small>
 
 ---
 class: middle
@@ -282,8 +274,8 @@ class: middle
 
 3 'tracks' for this workshop:
 
-1. Import sample data to make into local SKOS/RDF authority
-2. Import sample metadata to make into DPLA-style RDF Objects
+1. Import sample CSV data to make into local [SKOS/RDF authority](http://www.w3.org/TR/skos-primer/)
+2. Import sample DC/XML metadata to make into [DC/RDF](http://dublincore.org/documents/dcmi-terms/)
 3. Import your own data &amp; DIY it
 
 <small>Starter data: Cleaning Metadata > Data</small>
@@ -299,8 +291,6 @@ class: middle
 
 (Or download/save your metadata to working environment &amp; use 'This Computer')
 
-<small>Starter data: Cleaning Metadata > Instructions > Import.md</small>
-
 ---
 class: middle
 ## Import data into OpenRefine
@@ -312,8 +302,6 @@ class: middle
   * RDF: Preview options for loading
 7. Once ready, give name, Create Project
 
-<small>Starter data: Cleaning Metadata > Instructions > Import.md</small>
-
 ---
 class: middle
 ## Viewing OpenRefine Project
@@ -323,8 +311,6 @@ class: middle
 * Facet, Filter panel on left
 * If something freezes, refresh the browser (gahhhh)
 
-<small>Starter data: Cleaning Metadata > Instructions > Import.md</small>
-
 ---
 class: middle
 ## Import Your Data
@@ -332,8 +318,6 @@ class: middle
 Go ahead and import the data for the track you'd like to pursue. Explore the possible options.
 
 Bonus: Once your main project is created, export one of the sample RDF documents to see how it looks as an OpenRefine project. This differs from what the DERI extension expects.
-
-<small>Starter data: Cleaning Metadata > Instructions > Import.md</small>
 
 ---
 class: middle
@@ -356,35 +340,7 @@ Ways to Normalize, Remediate Data:
 * Faceting, Clustering, Filtering
 * Google Refine Expression Language (GREL)
 
-<small>Cleaning Metadata > Instructions > DataMunging.md</small>
-
----
-class: middle
-## Join, Split Rows
-
-
-<small>Cleaning Metadata > Instructions > DataMunging.md</small>
-
----
-class: middle
-## Splitting, Renaming Columns
-
-
-<small>Cleaning Metadata > Instructions > DataMunging.md</small>
-
----
-class: middle
-## Faceting, Clustering, Filtering
-
-
-<small>Cleaning Metadata > Instructions > DataMunging.md</small>
-
----
-class: middle
-## Google Refine Expression Language (GREL)
-
-
-<small>Cleaning Metadata > Instructions > DataMunging.md</small>
+<small>https://github.com/OpenRefine/OpenRefine/wiki</small>
 
 ---
 class: middle
@@ -395,8 +351,6 @@ class: middle
 * Facet, review
 * Facet, cluster, normalize
 * Filter to target, map values to new fields
-
-<small>Cleaning Metadata > Instructions > DataMunging.md</small>
 
 ---
 class: middle
@@ -431,15 +385,7 @@ class: middle
 class: middle
 ## Standard Recon Service API
 * RESTful API between OpenRefine and external data
-* requires tinkering knowledge of API building
-* can host for easier use
-
-<small>Cleaning Metadata > Instructions > Reconciliation</small>
-
----
-class: middle
-## Handling Recon Objects
-*
+* handles JSON reconciliation objects btwn datasource API + Openrefine
 
 <small>Cleaning Metadata > Instructions > Reconciliation</small>
 
@@ -456,8 +402,8 @@ class: middle
 ---
 class: middle
 ## Reconciliation Demos
-* LCSH via SPARQL
-* Languages via RDF Doc
+* [LCSH via SPARQL](http://freeyourmetadata.org/reconciliation/)
+* [Languages via RDF Doc]()
 * Geonames via Recon Service
 * AAT via LDF Recon Service
 * DBpedia via SPARQL
@@ -488,32 +434,17 @@ class: middle
 
 ---
 class: middle
-## DERI RDF Skeleton
+## DERI RDF Creation
 
+RDF Extension button > Edit RDF Skeleton...
 
+* Add Namespaces/Utilize Namespaces
+* Can assign types, create blank nodes
+* Preview the Output
+* Save your skeleton
+* Export > RDF...
 
-<small>Cleaning Metadata > Instructions > MapExportRDF.md</small>
-
----
-class: middle
-## DERI RDF Mapping: Add Namespaces
-
-
-<small>Cleaning Metadata > Instructions > MapExportRDF.md</small>
-
----
-class: middle
-## RDF:Type, Blank Nodes
-
-
-
-<small>Cleaning Metadata > Instructions > MapExportRDF.md</small>
-
----
-class: middle
-## Export RDF/XML, RDF-Ntriples
-
-<small>Cleaning Metadata > Instructions > MapExportRDF.md</small>
+<small>[http://refine.deri.ie/](http://refine.deri.ie/)</small>
 
 ---
 class: middle
@@ -524,8 +455,6 @@ Map your data to RDF using the RDF skeleton, preview the Turtle, then export whe
 Use the SKOS docs and the DPLA MAP v.4 doc to help guide the creation.
 
 Bonus: Export your doc then use for a test RDF Doc reconcile.
-
-<small>Cleaning Metadata > Instructions > MapExportRDF.md</small>
 
 ---
 class: middle
@@ -549,9 +478,6 @@ http://openrefine.org/
 http://github.com/openrefine/openrefine
 
 @openrefine, @cm_harlow
-
----
-class: middle
 
 
     </textarea>
