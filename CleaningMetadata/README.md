@@ -7,26 +7,26 @@ cmharlow@gmail.com
 **Note to Participants**: Please have OpenRefine and the DERI RDF Extension or LODRefine installed before the start of the workshop. Instructions for installation are available at [Installation](Installation/README.md). If you run into any issues with installation, please get in touch with [me](mailto:cmharlow@gmail.com) as soon as you are able, and I'll work through these issues with you.
 
 ## Agenda
-1. [Introduction to OpenRefine: Both Utilizing & Producing RDF](Instructions/Introduction.md)
+1. Introduction to OpenRefine: Both Utilizing & Producing RDF
     2. About
     3. Extensions
     4. LODRefine
     6. Resources
-2. [Import Data](Instructions/Import.md)
+2. Import Data
     3. CSV, Google Sheets
     4. JSON, XML
     5. RDF/XML, RDF Ntriples
-3. [Data Remediation/Munging](Instructions/DataMunging.md)
+3. Data Remediation/Munging
     4. Faceting, Clustering
     5. GREL
-4. [Reconciliation](Instructions/Reconciliation)
+4. Reconciliation
     5. Add a column/hit APIs
     6. Standard Reconciliation Services
     7. SPARQL Reconciliation
     8. RDF Document Reconciliation
     9. LDF Server Reconciliation
     10. Capturing URIs
-5. [Mapping to RDF](Instructions/MapExportRDF.md)
+5. Mapping to RDF
     6. Creating RDF skeleton
     7. Adding Ontology Namespaces
     8. Working with rdf:type, blank nodes
