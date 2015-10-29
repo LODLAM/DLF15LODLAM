@@ -27,4 +27,8 @@ Opportunity for workshop participants to give 2-3 minute lightning talks/demonst
 
 [Tom Johnson (DPLA)](http://www.twitter.com/no_reply)
 
-**3:30–4:30pm**: LODLAM clinic
+**3:30–4:30pm**: LODLAM clinic  
+<br />
+<br />
+##**Let us know what you think!**
+Take our simple [6 question survey] (https://docs.google.com/forms/d/1f31RjTo-mvqp_-l-3A7pqpO7KhZgQcTMQ9RQDlBp220/viewform?usp=send_form) to give us your feedback on today's workshop. Your responses will help us improve these workshops and get further support to conduct them at other conferences. 
