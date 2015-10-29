@@ -12,10 +12,10 @@ SPARQL Tutorial
 
 ## Why A Graph Query Language?
 
-[SPARQL 1.1](http://www.w3.org/TR/2013/REC-sparql11-query-20130321/): __S__PARQL
-__P__rotocol __a__nd __R__DF __Q__uery __L__anguage.
+[SPARQL 1.1](http://www.w3.org/TR/2013/REC-sparql11-query-20130321/): SPARQL
+Protocol and RDF Query Language.
 
-![A Graph](https://en.wikipedia.org/wiki/Graph_database#/media/File:GraphDatabase_PropertyGraph.png)
+![A Graph](https://upload.wikimedia.org/wikipedia/commons/3/3a/GraphDatabase_PropertyGraph.png)
 
 ## Basic Graph Patterns
 
