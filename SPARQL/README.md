@@ -20,5 +20,11 @@
  * [Blazegraph Setup](blazegraph.md)
  * [Gemfile for Blazegraph Setup](Gemfile)
  * [Blazegraph JAR](bigdata-1.5.2-bundled.jar)
+ * [Blazegraph License](BLAZEGRAPH_LICENSE.txt) (GPLv2)
+ * [Unlicense](UNLICENSE)
+
+Files in this directory are released into the public domain per
+[UNLICENSE](UNLICENSE), with the exception of `bigdata-1.5.2-bundled.jar`
+which packages software released under [GPLv2](BLAZEGRAPH_LICENSE.txt).
 
 ## Community Notes
